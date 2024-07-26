@@ -1,6 +1,5 @@
 respsota ="SIM"
 
-
 while respsota=="SIM":
     nome = input("Digite o nome do paciente")
     doenca_contagiosa =input("Exite sintomas de doença contagiosa?").upper()
