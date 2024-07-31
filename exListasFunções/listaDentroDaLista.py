@@ -33,7 +33,7 @@ serial = int(input ("Digite o serial do equipamento a ser excluido: "))
 for elemento in inventario:
     if elemento[2] == serial:
         inventario.remove(elemento)
-        break
+        print("Equipamento excluido com sucesso")
 
 #atualizar inventario
 print("\nInventario Atualizado:")
@@ -43,3 +43,11 @@ for elemento in inventario:
     print("Serial..: ", elemento[2])
     print("Departamento..: ", elemento[3])
     print("---------------------------------")
+
+valores=[]
+for elemento in inventario:
+  valores.append(elemento[1])
+if len(valores)>0:
+  print("O equipamento mais caro custa: ", max(valores))
+  print("O equipamento mais barato custa: ", min(valores))
+  print("O total de equipamentos é de: ", sum(valores))
