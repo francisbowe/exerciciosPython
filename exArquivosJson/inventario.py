@@ -1,7 +1,7 @@
 inventario = {}
-option = int ( input("Digite: " + "<1> Para registrar activo \n" + "<2> Para persistir em arquivo \n" + "<3>  Para exibir activos aramazenados \n :"))
+option = int ( input("Digite: " + "<1> Para registrar activo \n" + "<2> Para persistir em arquivo \n" + "<3>  Para exibir activos aramazenados \n :"+ "<4> Digite o nº patrimonial para pesquisar activos aramazenados \n :"))
 
-while option > 0 and option < 4 :
+while option > 0 and option < 5 :
     if option == 1:
         resp = "S"
         while resp == "S":
@@ -19,6 +19,15 @@ while option > 0 and option < 4 :
     elif option == 3:
         with open("inventario.csv", "r") as inv:
             print(inv.readlines())
-    option = int( input("Digite: " "<1> Para registrar activo \n" "<2> Para persistir em arquivo \n" "<3>  Para exibir activos aramazenados \n :"))
-chave = input("Digite o numero patrimonial para pesquisar: ")
+    elif option == 4:
+        chave = input("Digite o numero patrimonial: ")
+        lista = inventario.get(chave)
+        if lista!= None:
+            print("Nome...........: " + lista[1])
+            print("Ultima data..: " + lista[0])
+            print("Descrição....: " + lista[1])
+            print("Departamento..: " + lista[2])
+
+    option = int( input("Digite: " "<1> Para registrar activo \n" "<2> Para persistir em arquivo \n" "<3>  Para exibir activos aramazenados \n :"+ "<4> Digite o nº patrimonial para pesquisar activos aramazenados \n :"))
+
 
