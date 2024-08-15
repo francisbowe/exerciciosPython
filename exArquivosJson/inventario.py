@@ -13,7 +13,7 @@ while option > 0 and option < 5 :
         for line in result:
             print(line [line.find(";")+ 1:-1])
     elif option == 4:
-        patrimonial = input("Digite o nº Patrimonial para pesquisar: ")
+        patrimonial = input("Digite o nºs Patrimonial para pesquisar: ")
         searchInventory(inventario,patrimonial)
 
     option = showMenu ()
