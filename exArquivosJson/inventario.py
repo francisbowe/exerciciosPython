@@ -9,7 +9,9 @@ while option > 0 and option < 5 :
     elif option == 2:
         saveInventory(inventario)
     elif option == 3:
-        print(loadInventory ())
+        result = loadInventory()
+        for line in result:
+            print(line [line.find(";")+ 1:-1])
     elif option == 4:
         patrimonial = input("Digite o nº Patrimonial para pesquisar: ")
         searchInventory(inventario,patrimonial)
