@@ -13,7 +13,7 @@ def register (inventory):
 def saveInventory (inventory):
     with open("inventario.csv", "a") as file:
         for patrimonial, data in inventory.items():
-            file.write( patrimonial + ";" + data [0] + ";" + data [1] + ";" + data [2] + "")
+            file.write( patrimonial + ";" + data [0] + ";" + data [1] + ";" + data [2] + "\n")
     return "Persistido com Sucesso"
 def loadInventory ():
     with open("inventario.csv", "r") as file:
