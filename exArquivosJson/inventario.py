@@ -10,8 +10,14 @@ while option > 0 and option < 5 :
         saveInventory(inventario)
     elif option == 3:
         result = loadInventory()
+        #vai apresentar todos os dados do inventario
+        #menos o id será cortado no 1º ;
         for line in result:
-            print(line [line.find(";")+ 1:-1])
+            list = line.split(";")
+            print("Data......", list[1])
+            print("Descrição..", list[2])
+            print("Departamento..", list[3])
+            print("---------------------------------")
     elif option == 4:
         patrimonial = input("Digite o nºs Patrimonial para pesquisar: ")
         searchInventory(inventario,patrimonial)
