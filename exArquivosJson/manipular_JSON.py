@@ -1,6 +1,7 @@
 import json
 inventario ={}
-
+with open ("inventario_json.json", "r") as arq_json :
+    inventario = json.load(arq_json)
 opcao = int (input("Digite: \n" + "<1> Para registrar \n" + "<2> Para exibir em arquivo \n :"))
 
 while opcao > 0 and opcao < 3 :
