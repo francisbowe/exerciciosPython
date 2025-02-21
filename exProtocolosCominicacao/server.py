@@ -11,7 +11,7 @@ while True:
     print("Conectado com: ", cliente)
     while True:
         msg_recebida = str(con.recv(1024)) #recebendo a mensagem
-        print("Recebemos: ", msg_recebida)
+        print("Recebemos: ", str(msg_recebida)[2:-1]) #[2:-1] para remover b' e ' da mensagem
         msg_enviada = bytes(input("Sua resposta: "), 'utf-8') #enviando a mensagem
         con.send(msg_enviada)
         break
