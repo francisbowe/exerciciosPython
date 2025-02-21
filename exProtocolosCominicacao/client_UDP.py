@@ -1,10 +1,10 @@
 from socket import *
 
-server = "localhost"
+server = "127.0.0.1"
 port = 43210
 
 obj_socket = socket(AF_INET, SOCK_DGRAM) #criando um socket com protocolo UDP
-obj_socket.connect((server, port)) #vinculando o socket ao endereco e porta
+
 out = ""
 while out != "X":
     msg = input("Digite algo: ")
